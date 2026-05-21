@@ -71,7 +71,7 @@ const Form = () => {
         try {
             const res = await axios.post('http://127.0.0.1:8000/api/book/create', newData)
             console.log(res.data)
-            getdata()
+            // getdata()
         }
         catch (err) { 
             console.log(err)
@@ -151,7 +151,7 @@ const Form = () => {
         try{
             const res =  await axios.delete(`http://127.0.0.1:8000/api/book/deletedata/${id}`)
             console.log(res.data)
-            getdata()
+            // getdata()
         }
         catch(err){
             console.log(err)
