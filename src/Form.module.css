@@ -1,0 +1,93 @@
+.wholeclass{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.formclass{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle,#ff512f 0%, #f7a636 50%, #ffe259 100%);
+}
+.inform{
+    /* border: 1px solid yellow; */
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+}
+.hint{
+    /* border: 1px solid green; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 14px;
+}
+.hint input{
+    max-width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.main{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main button{
+    width: 50px !important;
+    height: 20px;
+}
+.tableclass{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.firstclass{
+    /* border: 1px solid blue; */
+    width: 80%;
+    margin: auto;
+}
+.firstclass table,th,td{
+     border: 1px solid;
+     border-collapse: collapse;
+     padding: 4px;
+}
+.search{
+    width: 100%;
+    padding: 10px;
+}
+.fill{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.imagediv{
+    width: 50px;
+    height: 35px;
+}
+.imagediv img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:320px) and (max-width:576px){
+    .inform{
+        width:100% !important;
+    }
+    .hint{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px){
+    .hint{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px){
+    .hint{
+        width: 50%;
+    }
+}
