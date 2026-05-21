@@ -70,6 +70,7 @@ const Form = () => {
         }
         try {
             const res = await axios.post('http://127.0.0.1:8000/api/book/create', newData)
+            console.log(res.data)
             getdata()
         }
         catch (err) { 
@@ -83,16 +84,7 @@ const Form = () => {
         setrating('')
     }
 
-    const getdata = async () => {
-        try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/book/fetched?search=${search}`)
-            setdata(res.data.data)
-            console.log(res.data)
-        }
-        catch (err) {
-            console.log(err)
-        }
-    }
+    
     
     const getdataid = async (id) => {
         try {
@@ -113,6 +105,16 @@ const Form = () => {
     }
 
     useEffect(() => {
+        const getdata = async () => {
+        try {
+            const res = await axios.get(`http://127.0.0.1:8000/api/book/fetched?search=${search}`)
+            setdata(res.data.data)
+            console.log(res.data)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
         getdata()
     }, [search])
 
@@ -130,6 +132,7 @@ const Form = () => {
 
         try {
             const res = await axios.put(`http://127.0.0.1:8000/api/book/upadte/${id}`,newData)
+            console.log(res.data)
             setId('')
             setisedit(false)
         }
@@ -147,6 +150,7 @@ const Form = () => {
     const deletedata = async(id) => {
         try{
             const res =  await axios.delete(`http://127.0.0.1:8000/api/book/deletedata/${id}`)
+            console.log(res.data)
             getdata()
         }
         catch(err){
