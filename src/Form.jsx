@@ -69,7 +69,7 @@ const Form = () => {
             Book_rating: rating
         }
         try {
-            const res = await axios.post('http://127.0.0.1:8000/api/book/create', newData)
+            const res = await axios.post('https://booksbackend-d11z.onrender.com/api/book/create', newData)
             console.log(res.data)
             // getdata()
         }
@@ -88,7 +88,7 @@ const Form = () => {
     
     const getdataid = async (id) => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/book/getdata/${id}`)
+            const res = await axios.get(`https://booksbackend-d11z.onrender.com/api/book/getdata/${id}`)
 
             console.log(res.data.data)
             setname(res.data.data.Book_name)
@@ -107,7 +107,7 @@ const Form = () => {
     useEffect(() => {
         const getdata = async () => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/book/fetched?search=${search}`)
+            const res = await axios.get(`https://booksbackend-d11z.onrender.com/api/book/fetched?search=${search}`)
             setdata(res.data.data)
             console.log(res.data)
         }
@@ -131,7 +131,7 @@ const Form = () => {
         }
 
         try {
-            const res = await axios.put(`http://127.0.0.1:8000/api/book/upadte/${id}`,newData)
+            const res = await axios.put(`https://booksbackend-d11z.onrender.com/api/book/upadte/${id}`,newData)
             console.log(res.data)
             setId('')
             setisedit(false)
@@ -149,7 +149,7 @@ const Form = () => {
    
     const deletedata = async(id) => {
         try{
-            const res =  await axios.delete(`http://127.0.0.1:8000/api/book/deletedata/${id}`)
+            const res =  await axios.delete(`https://booksbackend-d11z.onrender.com/api/book/deletedata/${id}`)
             console.log(res.data)
             // getdata()
         }
